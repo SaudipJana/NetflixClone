@@ -1,0 +1,271 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    color: #e5e5e5;
+
+}
+a{
+    text-decoration: none;
+}
+a h3:hover{
+    color: #fff;
+}
+.signInContainer{
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.column{
+    background-color: #fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+    padding: 20px 35px;
+    overflow-y: auto;    
+}
+.column form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.column form input[type="text"],
+input[type="email"], 
+input[type="password"]{
+    font-size: 16px;
+    margin: 12px 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    outline: none;
+}
+.column form input[type="submit"]{
+    font-size: 18px;
+    background-color: #4285f4;
+    color: #fff;
+    height: 40px;
+    width: 90px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 15px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.header{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.header h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding-top: 15px;
+    color: black;
+}
+.header span, .signInMsg{
+    font-size: 14px;
+    font-weight: 400;
+}
+.header img{
+    position: relative;
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 20px;
+}
+.signInMsg{
+    display: block;
+    text-align: center;
+}
+.signInMsg a{
+    text-decoration: none;
+    color: blueviolet;
+    
+}
+.errorMsg{
+    color: #f00;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* index */
+
+.wrapper{
+    min-width: 1050px;
+    min-height: 100%;
+    background-color: #141414;
+    
+}
+.previewImage, .previewVideo{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+.previewContainer{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+}
+.previewOverlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+}
+.mainDetails{
+    position: relative;
+    top: 35%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.mainDetails h3{
+    color: #fff;
+    font-size: 40px;
+    margin: 15px 0;
+}
+.buttons button{
+    background-color: rgba(51, 51, 51, .4);
+    color: #fff;
+    border: none;
+    min-width: 150px;
+    padding: 0 38px;
+    height: 50px;
+    max-height: 50px;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.buttons button i{
+    color: inherit;
+}
+.buttons button:hover{
+    background-color: #e6e6e6;
+    color: #000;
+}
+.small{
+    width: 230px;
+    height: 129px;
+    margin-right: 4px;
+    /* display: inline-flex; */
+    object-fit: cover;
+
+    /* margin-right: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; */
+}
+.small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.previewCategories, .season{
+    padding: 0 50px;
+}
+.category, .season{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px 0; */
+    position: relative;
+    padding-bottom: 16px;
+}
+.entities, .videos{
+    /* overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; */
+
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll */
+    overflow-y: hidden; /* Hide vertical scroll */
+    white-space: nowrap;
+    width: 100%; /* Make sure it has a defined width */
+    scroll-behavior: smooth;
+    /* padding: 20px 0; */
+}
+
+
+/* Customize scrollbar for WebKit browsers */
+.entities::-webkit-scrollbar,
+.videos::-webkit-scrollbar {
+    height: 8px; /* Height for horizontal scrollbar */
+}
+.entities::-webkit-scrollbar-track, 
+.videos::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track background */
+}
+.entities::-webkit-scrollbar-thumb,
+.videos::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 10px;
+}
+.entities::-webkit-scrollbar-thumb:hover,
+.videos::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker on hover */
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* entity */
+
+.errorBanner{
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+/* .season{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+} */
+.episodeContainer{
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 8px;
+}
+.episodeContainer .contents{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+}
+.episodeContainer img{
+    width: 230px;
+    height: 129px;
+    /* object-fit: cover; */
+}
+.episodeContainer .videoInfo h4, 
+.episodeContainer .videoInfo span{
+    color: #fff;
+    width: 100%;
+    white-space: normal;
+    text-align: justify;
+}
+.episodeContainer .videoInfo{
+    max-height: 200px;
+    overflow-y: auto;
+}
